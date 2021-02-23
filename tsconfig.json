@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "ES2018",
+    "baseUrl": "./src",
+    "esModuleInterop": true,
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "paths": {
+      "@messages/*": ["resources/messages/*.ts"],
+      "@helpers/*": ["core/helpers/*"],
+      "@api/*": ["core/api/*"],
+      "@config/*": ["../config/*"],
+      "@typings/*": ["core/typings/*"],
+      "@core/*": ["core/*.ts"],
+      "@ui/*": ["core/ui/*.ts"],
+      "@ui": ["core/ui"],
+      "@pages": ["pages"],
+      "@locators": ["pages/locators"]
+    },
+    "types": [
+      "node",
+      "@wdio/sync",
+      "@wdio/mocha-framework",
+      "@wdio/devtools-service",
+      "expect-webdriverio",
+      "./src/core/typings"
+    ]
+  },
+  "include": ["./src/**/*.ts", "./config/**/*.ts", "./test/**/*.ts"]
+}
